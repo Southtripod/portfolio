@@ -1,0 +1,170 @@
+/* Base Reset & Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #fff;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #f8f8f8;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+body.dark-mode header {
+  background: #1f1f1f;
+}
+
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #007bff;
+}
+
+#theme-toggle {
+  cursor: pointer;
+  font-size: 1.2rem;
+  background: none;
+  border: none;
+}
+
+.hero {
+  padding: 4rem 2rem;
+}
+
+.about-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.profile-pic img {
+  border-radius: 50%;
+  width: 200px;
+}
+
+.about-text {
+  max-width: 800px;
+}
+
+/* Skills */
+.tech-slider {
+  padding: 4rem 2rem;
+}
+
+.skills-title {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.tech-track {
+  overflow: hidden;
+  position: relative;
+  background: #101039;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.tech-marquee {
+  display: flex;
+  gap: 2rem;
+  animation: scroll 20s linear infinite;
+}
+
+.tech-marquee span {
+  white-space: nowrap;
+  font-weight: bold;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Projects */
+.projects {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.project-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-item {
+  max-width: 300px;
+  background: #fafafa;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-item img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+/* Contact */
+.contact {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.socials a img {
+  margin: 0 1rem;
+  filter: invert(0);
+  transition: filter 0.3s;
+}
+
+body.dark-mode .socials a img {
+  filter: invert(1);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #f0f0f0;
+}
+
+body.dark-mode footer {
+  background: #1f1f1f;
+}
+body.dark-mode .project-item {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
