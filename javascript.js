@@ -12,4 +12,6 @@ document.querySelectorAll("a[href^='#']").forEach(anchor => {
     const target = document.querySelector(this.getAttribute("href"));
     target.scrollIntoView({ behavior: "smooth" });
   });
+});document.getElementById('hamburger').addEventListener('click', () => {
+  document.querySelector('nav').classList.toggle('show');
 });
